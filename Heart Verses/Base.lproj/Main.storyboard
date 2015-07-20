@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A215h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hOw-hD-9My">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -18,7 +19,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="64"/>
+            <point key="canvasLocation" x="-114" y="-162"/>
         </scene>
         <!--Home-->
         <scene sceneID="M1R-Cn-fu2">
@@ -64,7 +65,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A5W-Uz-7PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="831"/>
+            <point key="canvasLocation" x="433" y="605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L8y-pz-5iH">
@@ -81,7 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKV-nL-JWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="831"/>
+            <point key="canvasLocation" x="-387" y="605"/>
         </scene>
         <!--Verses-->
         <scene sceneID="VgW-fR-Quf">
@@ -124,11 +125,116 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Verses" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="My Verses" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v1y-jM-KJ7">
+                            <connections>
+                                <segue destination="rp8-ZU-wso" kind="presentation" id="Edg-s6-0y5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="64"/>
+            <point key="canvasLocation" x="627" y="-162"/>
+        </scene>
+        <!--Add Verse-->
+        <scene sceneID="WP0-5N-kaU">
+            <objects>
+                <viewController id="J8F-Go-HUx" customClass="AddVerseViewController" customModule="Heart_Verses" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gin-hT-IfL"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6P-Dr-PSs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zpn-rK-kCX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gu9-5x-DFO">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I encountered an error while fetching verses from the internet. Sorry!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-C7-muI">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="vFa-OR-m4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vFa-OR-m4F"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="vFa-OR-m4F"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qgu-C7-muI" firstAttribute="top" secondItem="Gu9-5x-DFO" secondAttribute="bottom" constant="80" id="00Y-OS-Ni9"/>
+                            <constraint firstItem="Gu9-5x-DFO" firstAttribute="top" secondItem="gin-hT-IfL" secondAttribute="bottom" constant="98" id="81c-lk-llp"/>
+                            <constraint firstItem="Gu9-5x-DFO" firstAttribute="leading" secondItem="Zpn-rK-kCX" secondAttribute="leadingMargin" id="8ZI-qX-3NV"/>
+                            <constraint firstItem="qgu-C7-muI" firstAttribute="leading" secondItem="Gu9-5x-DFO" secondAttribute="leading" id="CX0-mu-UVL"/>
+                            <constraint firstItem="Gu9-5x-DFO" firstAttribute="trailing" secondItem="Zpn-rK-kCX" secondAttribute="trailingMargin" id="TZ0-sJ-MfU"/>
+                            <constraint firstItem="qgu-C7-muI" firstAttribute="trailing" secondItem="Gu9-5x-DFO" secondAttribute="trailing" id="rL8-gp-Gim"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gu9-5x-DFO"/>
+                                <exclude reference="qgu-C7-muI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="81c-lk-llp"/>
+                                <exclude reference="8ZI-qX-3NV"/>
+                                <exclude reference="TZ0-sJ-MfU"/>
+                                <exclude reference="00Y-OS-Ni9"/>
+                                <exclude reference="CX0-mu-UVL"/>
+                                <exclude reference="rL8-gp-Gim"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gu9-5x-DFO"/>
+                                <include reference="qgu-C7-muI"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="81c-lk-llp"/>
+                                <include reference="8ZI-qX-3NV"/>
+                                <include reference="TZ0-sJ-MfU"/>
+                                <include reference="00Y-OS-Ni9"/>
+                                <include reference="CX0-mu-UVL"/>
+                                <include reference="rL8-gp-Gim"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Verse" id="G9a-GM-qHH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Npv-B4-TF3">
+                            <connections>
+                                <action selector="cancelAddVerse:" destination="J8F-Go-HUx" id="FiT-Hv-m2B"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="h2B-e9-lVq">
+                            <connections>
+                                <action selector="addVerse:" destination="J8F-Go-HUx" id="xRt-H2-WG5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorText" destination="qgu-C7-muI" id="fNB-sI-AKw"/>
+                        <outlet property="passageRequest" destination="Gu9-5x-DFO" id="15B-u6-Kax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3a-mO-t5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="-926.25"/>
         </scene>
         <!--Verse Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -166,7 +272,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="64"/>
+            <point key="canvasLocation" x="1365" y="-162"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pia-4m-qCj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rp8-ZU-wso" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JRh-TN-EQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J8F-Go-HUx" kind="relationship" relationship="rootViewController" id="pTy-v3-xYI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZ2-Mk-uQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="-926"/>
         </scene>
     </scenes>
 </document>
