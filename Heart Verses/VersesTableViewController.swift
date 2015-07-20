@@ -1,15 +1,8 @@
-//
-//  MasterViewController.swift
-//  Heart Verses
-//
-//  Created by Isaac Williams on 7/20/15.
-//  Copyright (c) 2015 Isaac Williams. All rights reserved.
-//
 
 import UIKit
 import CoreData
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class VersesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedObjectContext: NSManagedObjectContext? = nil
@@ -20,28 +13,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.managedObjectContext = self.appDelegate.managedObjectContext
     }
 
-    func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity!
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as! NSManagedObject
-
-        newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-
-        var error: NSError? = nil
-        if !context.save(&error) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            abort()
-        }
-    }
-
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
             let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-            (segue.destinationViewController as! DetailViewController).detailItem = object
+            (segue.destinationViewController as! VerseDetailViewController).detailItem = object
             }
         }
     }
@@ -100,7 +78,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
         fetchRequest.fetchBatchSize = 20
         
-        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "passage", ascending: false)
         let sortDescriptors = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
