@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		FDFA2B851B5D8715008E1BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */; };
 		FDFA2B881B5D8715008E1BDB /* Heart_Verses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B861B5D8715008E1BDB /* Heart_Verses.xcdatamodeld */; };
-		FDFA2B8A1B5D8715008E1BDB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B891B5D8715008E1BDB /* MasterViewController.swift */; };
-		FDFA2B8C1B5D8715008E1BDB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B8B1B5D8715008E1BDB /* DetailViewController.swift */; };
+		FDFA2B8A1B5D8715008E1BDB /* VersesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */; };
+		FDFA2B8C1B5D8715008E1BDB /* VerseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */; };
 		FDFA2B8F1B5D8715008E1BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDFA2B8D1B5D8715008E1BDB /* Main.storyboard */; };
 		FDFA2B911B5D8715008E1BDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDFA2B901B5D8715008E1BDB /* Images.xcassets */; };
 		FDFA2B941B5D8715008E1BDB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFA2B921B5D8715008E1BDB /* LaunchScreen.xib */; };
@@ -32,8 +32,8 @@
 		FDFA2B831B5D8715008E1BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDFA2B871B5D8715008E1BDB /* Heart_Verses.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Heart_Verses.xcdatamodel; sourceTree = "<group>"; };
-		FDFA2B891B5D8715008E1BDB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		FDFA2B8B1B5D8715008E1BDB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersesTableViewController.swift; sourceTree = "<group>"; };
+		FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseDetailViewController.swift; sourceTree = "<group>"; };
 		FDFA2B8E1B5D8715008E1BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDFA2B901B5D8715008E1BDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FDFA2B931B5D8715008E1BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */,
-				FDFA2B891B5D8715008E1BDB /* MasterViewController.swift */,
-				FDFA2B8B1B5D8715008E1BDB /* DetailViewController.swift */,
+				FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */,
+				FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */,
 				FDFA2B8D1B5D8715008E1BDB /* Main.storyboard */,
 				FDFA2B901B5D8715008E1BDB /* Images.xcassets */,
 				FDFA2B921B5D8715008E1BDB /* LaunchScreen.xib */,
@@ -220,8 +220,8 @@
 			files = (
 				FDFA2B881B5D8715008E1BDB /* Heart_Verses.xcdatamodeld in Sources */,
 				FDFA2B851B5D8715008E1BDB /* AppDelegate.swift in Sources */,
-				FDFA2B8A1B5D8715008E1BDB /* MasterViewController.swift in Sources */,
-				FDFA2B8C1B5D8715008E1BDB /* DetailViewController.swift in Sources */,
+				FDFA2B8A1B5D8715008E1BDB /* VersesTableViewController.swift in Sources */,
+				FDFA2B8C1B5D8715008E1BDB /* VerseDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
