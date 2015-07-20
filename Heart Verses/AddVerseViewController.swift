@@ -16,6 +16,7 @@ class AddVerseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorText.numberOfLines = 0
     }
 
     @IBAction func cancelAddVerse(sender: AnyObject) {
