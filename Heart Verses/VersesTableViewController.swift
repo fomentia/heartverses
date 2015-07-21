@@ -61,7 +61,7 @@ class VersesTableViewController: UITableViewController, NSFetchedResultsControll
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-        cell.textLabel!.text = object.valueForKey("timeStamp")!.description
+        cell.textLabel!.text = object.valueForKey("passage")!.description
     }
 
     // MARK: - Fetched results controller

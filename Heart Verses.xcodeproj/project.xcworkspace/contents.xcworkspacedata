@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Heart Verses/Verse.swift">
+   </FileRef>
+   <FileRef
       location = "self:Heart Verses.xcodeproj">
    </FileRef>
 </Workspace>

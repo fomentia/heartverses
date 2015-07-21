@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD352F7A1B5EE42E004E5F80 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD352F791B5EE42E004E5F80 /* Verse.swift */; };
 		FD91EF891B5D92AD0001E7F9 /* AddVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */; };
 		FDFA2B851B5D8715008E1BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */; };
 		FDFA2B881B5D8715008E1BDB /* Heart_Verses.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B861B5D8715008E1BDB /* Heart_Verses.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD352F791B5EE42E004E5F80 /* Verse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
 		FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVerseViewController.swift; sourceTree = "<group>"; };
 		FDFA2B7F1B5D8715008E1BDB /* Heart Verses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Verses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDFA2B831B5D8715008E1BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */,
 				FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */,
 				FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */,
+				FD352F791B5EE42E004E5F80 /* Verse.swift */,
 				FDFA2B8D1B5D8715008E1BDB /* Main.storyboard */,
 				FDFA2B901B5D8715008E1BDB /* Images.xcassets */,
 				FDFA2B921B5D8715008E1BDB /* LaunchScreen.xib */,
@@ -224,6 +227,7 @@
 				FDFA2B881B5D8715008E1BDB /* Heart_Verses.xcdatamodeld in Sources */,
 				FDFA2B851B5D8715008E1BDB /* AppDelegate.swift in Sources */,
 				FDFA2B8A1B5D8715008E1BDB /* VersesTableViewController.swift in Sources */,
+				FD352F7A1B5EE42E004E5F80 /* Verse.swift in Sources */,
 				FDFA2B8C1B5D8715008E1BDB /* VerseDetailViewController.swift in Sources */,
 				FD91EF891B5D92AD0001E7F9 /* AddVerseViewController.swift in Sources */,
 			);
