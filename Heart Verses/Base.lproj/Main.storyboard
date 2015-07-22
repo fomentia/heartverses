@@ -269,15 +269,44 @@
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="340" width="360" height="119"/>
+                                </variation>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="4" id="27i-q9-i2a"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="62x-JV-TTJ"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerX" secondItem="MMQ-IT-qOo" secondAttribute="centerX" id="DA6-ni-kRi"/>
                             <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="JzS-HC-Rnl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="4" id="VNH-IK-ZXW"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="centerY" secondItem="MMQ-IT-qOo" secondAttribute="centerY" id="pAb-BC-hbp"/>
                             <constraint firstAttribute="trailing" secondItem="Lei-5M-9Gs" secondAttribute="trailing" constant="20" symbolic="YES" id="pXB-RP-Zz6"/>
+                            <constraint firstItem="Lei-5M-9Gs" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leadingMargin" constant="4" id="z4S-ap-xIk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="27i-q9-i2a"/>
+                                <exclude reference="DA6-ni-kRi"/>
+                                <exclude reference="VNH-IK-ZXW"/>
+                                <exclude reference="pAb-BC-hbp"/>
+                                <exclude reference="z4S-ap-xIk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="27i-q9-i2a"/>
+                                <exclude reference="62x-JV-TTJ"/>
+                                <include reference="DA6-ni-kRi"/>
+                                <exclude reference="JzS-HC-Rnl"/>
+                                <include reference="VNH-IK-ZXW"/>
+                                <include reference="pAb-BC-hbp"/>
+                                <exclude reference="pXB-RP-Zz6"/>
+                                <include reference="z4S-ap-xIk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Verse Details" id="cra-N8-TIN"/>
                     <connections>
