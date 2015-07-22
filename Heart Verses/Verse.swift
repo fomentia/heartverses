@@ -44,6 +44,7 @@ class HeartVersesAPI: NSObject {
         var chapter: Int?
         var verseNumber: Int?
         var text: String?
+        var passageString: String?
         
         let url = NSURL(string: passage)
         let session = NSURLSession.sharedSession()
@@ -53,39 +54,38 @@ class HeartVersesAPI: NSObject {
             let task = session.dataTaskWithURL(url!, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
                 var parseError: NSError?
                 let parsedJSON: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error:&parseError)
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    if let verseData = parsedJSON as? NSDictionary {
-                        if let verses = verseData["verses"] as? NSArray {
-                            if let topVerseObject = verses[0] as? NSDictionary {
-                                if let rawBook = topVerseObject["book"] as? String {
-                                    book = rawBook
-                                }
-                                
-                                if let rawChapter = topVerseObject["chapter"] as? Int {
-                                    chapter = rawChapter
-                                }
-                                
-                                if let rawVerse = topVerseObject["verse"] as? Int {
-                                    verseNumber = rawVerse
-                                }
-                                
-                                if let verseText = topVerseObject["text"] as? String {
-                                    text = verseText
-                                }
-                                
-                                let passageString = "\(book!) \(chapter!):\(verseNumber!)"
-                                
-                                let verse = NSEntityDescription.insertNewObjectForEntityForName("Verse", inManagedObjectContext: self.managedObjectContext!) as! Verse
-                                verse.translation = "KJV"
-                                verse.passage = passageString
-                                verse.text = text!
-                                
-                                var error: NSError?
-                                self.managedObjectContext!.save(&error)
+                if let verseData = parsedJSON as? NSDictionary {
+                    if let verses = verseData["verses"] as? NSArray {
+                        if let topVerseObject = verses[0] as? NSDictionary {
+                            if let rawBook = topVerseObject["book"] as? String {
+                                book = rawBook
                             }
+                            
+                            if let rawChapter = topVerseObject["chapter"] as? Int {
+                                chapter = rawChapter
+                            }
+                            
+                            if let rawVerse = topVerseObject["verse"] as? Int {
+                                verseNumber = rawVerse
+                            }
+                            
+                            if let verseText = topVerseObject["text"] as? String {
+                                text = verseText
+                            }
+                            
+                            passageString = "\(book!) \(chapter!):\(verseNumber!)"
                         }
                     }
+                }
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    let verse = NSEntityDescription.insertNewObjectForEntityForName("Verse", inManagedObjectContext: self.managedObjectContext!) as! Verse
+                    verse.translation = "KJV"
+                    verse.passage = passageString!
+                    verse.text = text!
+                    
+                    var error: NSError?
+                    self.managedObjectContext!.save(&error)
                 }
             })
             
