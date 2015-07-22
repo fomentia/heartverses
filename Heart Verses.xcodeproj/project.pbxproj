@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1F8BA21B60355900D5025D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F8BA11B60355900D5025D /* SettingsTableViewController.swift */; };
 		FD352F7A1B5EE42E004E5F80 /* Verse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD352F791B5EE42E004E5F80 /* Verse.swift */; };
 		FD91EF891B5D92AD0001E7F9 /* AddVerseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */; };
 		FDFA2B851B5D8715008E1BDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD1F8BA11B60355900D5025D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		FD352F791B5EE42E004E5F80 /* Verse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verse.swift; sourceTree = "<group>"; };
 		FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddVerseViewController.swift; sourceTree = "<group>"; };
 		FDFA2B7F1B5D8715008E1BDB /* Heart Verses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heart Verses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1F8BA31B60356700D5025D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD352F791B5EE42E004E5F80 /* Verse.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FD1F8BA41B60356E00D5025D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDFA2B8D1B5D8715008E1BDB /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FD1F8BA51B60357E00D5025D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD1F8BA61B60359D00D5025D /* Settings */,
+				FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */,
+				FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */,
+				FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FD1F8BA61B60359D00D5025D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FD1F8BA11B60355900D5025D /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		FDFA2B761B5D8715008E1BDB = {
 			isa = PBXGroup;
 			children = (
@@ -86,14 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				FDFA2B841B5D8715008E1BDB /* AppDelegate.swift */,
-				FDFA2B891B5D8715008E1BDB /* VersesTableViewController.swift */,
-				FDFA2B8B1B5D8715008E1BDB /* VerseDetailViewController.swift */,
-				FD91EF881B5D92AD0001E7F9 /* AddVerseViewController.swift */,
-				FD352F791B5EE42E004E5F80 /* Verse.swift */,
-				FDFA2B8D1B5D8715008E1BDB /* Main.storyboard */,
-				FDFA2B901B5D8715008E1BDB /* Images.xcassets */,
-				FDFA2B921B5D8715008E1BDB /* LaunchScreen.xib */,
 				FDFA2B861B5D8715008E1BDB /* Heart_Verses.xcdatamodeld */,
+				FDFA2B921B5D8715008E1BDB /* LaunchScreen.xib */,
+				FDFA2B901B5D8715008E1BDB /* Images.xcassets */,
+				FD1F8BA31B60356700D5025D /* Model */,
+				FD1F8BA41B60356E00D5025D /* View */,
+				FD1F8BA51B60357E00D5025D /* Controller */,
 				FDFA2B821B5D8715008E1BDB /* Supporting Files */,
 			);
 			path = "Heart Verses";
@@ -230,6 +265,7 @@
 				FD352F7A1B5EE42E004E5F80 /* Verse.swift in Sources */,
 				FDFA2B8C1B5D8715008E1BDB /* VerseDetailViewController.swift in Sources */,
 				FD91EF891B5D92AD0001E7F9 /* AddVerseViewController.swift in Sources */,
+				FD1F8BA21B60355900D5025D /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
