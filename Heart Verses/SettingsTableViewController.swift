@@ -21,6 +21,8 @@ class SettingsTableViewController: UITableViewController {
         if let reminderState: AnyObject = defaults.valueForKey("remindersOn") {
             if reminderState as! Bool == true {
                 self.reminderSwitch.on = true
+            } else {
+                self.reminderSwitch.on = false
             }
         }
     }
