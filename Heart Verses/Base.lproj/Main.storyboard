@@ -43,7 +43,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -107,7 +107,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
@@ -163,7 +163,7 @@
                                     <constraint firstAttribute="height" constant="83" id="vFa-OR-m4F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -176,6 +176,10 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yiw-nf-cfc">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,13 +188,16 @@
                             <constraint firstItem="Gu9-5x-DFO" firstAttribute="top" secondItem="gin-hT-IfL" secondAttribute="bottom" constant="98" id="81c-lk-llp"/>
                             <constraint firstItem="Gu9-5x-DFO" firstAttribute="leading" secondItem="Zpn-rK-kCX" secondAttribute="leadingMargin" id="8ZI-qX-3NV"/>
                             <constraint firstItem="qgu-C7-muI" firstAttribute="leading" secondItem="Gu9-5x-DFO" secondAttribute="leading" id="CX0-mu-UVL"/>
+                            <constraint firstItem="qgu-C7-muI" firstAttribute="top" secondItem="yiw-nf-cfc" secondAttribute="bottom" constant="27" id="P5e-Do-FED"/>
                             <constraint firstItem="Gu9-5x-DFO" firstAttribute="trailing" secondItem="Zpn-rK-kCX" secondAttribute="trailingMargin" id="TZ0-sJ-MfU"/>
                             <constraint firstItem="qgu-C7-muI" firstAttribute="trailing" secondItem="Gu9-5x-DFO" secondAttribute="trailing" id="rL8-gp-Gim"/>
+                            <constraint firstItem="yiw-nf-cfc" firstAttribute="centerX" secondItem="Gu9-5x-DFO" secondAttribute="centerX" id="rgl-f6-gcP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Gu9-5x-DFO"/>
                                 <exclude reference="qgu-C7-muI"/>
+                                <exclude reference="yiw-nf-cfc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="81c-lk-llp"/>
@@ -198,13 +205,16 @@
                                 <exclude reference="TZ0-sJ-MfU"/>
                                 <exclude reference="00Y-OS-Ni9"/>
                                 <exclude reference="CX0-mu-UVL"/>
+                                <exclude reference="P5e-Do-FED"/>
                                 <exclude reference="rL8-gp-Gim"/>
+                                <exclude reference="rgl-f6-gcP"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Gu9-5x-DFO"/>
                                 <include reference="qgu-C7-muI"/>
+                                <include reference="yiw-nf-cfc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="81c-lk-llp"/>
@@ -212,7 +222,9 @@
                                 <include reference="TZ0-sJ-MfU"/>
                                 <include reference="00Y-OS-Ni9"/>
                                 <include reference="CX0-mu-UVL"/>
+                                <include reference="P5e-Do-FED"/>
                                 <include reference="rL8-gp-Gim"/>
+                                <include reference="rgl-f6-gcP"/>
                             </mask>
                         </variation>
                     </view>
@@ -229,6 +241,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="yiw-nf-cfc" id="7a9-gd-r6c"/>
                         <outlet property="errorText" destination="qgu-C7-muI" id="fNB-sI-AKw"/>
                         <outlet property="passageRequest" destination="Gu9-5x-DFO" id="15B-u6-Kax"/>
                     </connections>
@@ -254,7 +267,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

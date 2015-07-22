@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class Verse: NSManagedObject {
     @NSManaged var passage: String
@@ -39,7 +40,7 @@ class HeartVersesAPI: NSObject {
         managedObjectContext = moc
     }
     
-    func loadVerse(passage: String) {
+    func loadVerse(passage: String, completion: (UIBackgroundFetchResult) -> Void) {
         var book: String?
         var chapter: Int?
         var verseNumber: Int?
@@ -90,6 +91,9 @@ class HeartVersesAPI: NSObject {
             })
             
             task.resume()
+            
+            completion(UIBackgroundFetchResult.NewData)
+            println("done")
         })
     }
 }
